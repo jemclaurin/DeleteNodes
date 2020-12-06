@@ -3,7 +3,9 @@ var nodeRef = siteService.getSite("Site2bDeleted");
 var testingFolder = userhome.childByNamePath("User Homes/");
 
 var nodeRef = siteService.getSite(shortName);
-var nodeRef2 = nodeRef.getNode().getNodeRef();
+var nodeRef2 = nodeRef.getNode().getNodeRef().toString();
+
+var foundIt = search.findNode(nodeRef2);
 
 // remove node
 function removeNode(node) {
