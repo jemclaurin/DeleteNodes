@@ -1,7 +1,9 @@
-var nodeRef =
-"workspace://SpacesStore/2112480f-f0e8-461b-9564-78e7225f177c";
+var nodeRef = "workspace://SpacesStore/2112480f-f0e8-461b-9564-78e7225f177c";
 
-var testingFolder = userhome.childByNamePath("QA/Performance/Testing");
+var testingFolder = userhome.childByNamePath("User Homes/");
+
+var nodeRef = siteService.getSite(shortName);
+var nodeRef2 = siteService.getSite(shortName).getNode().getNodeRef();
 
 // remove node
 function removeNode(node) {
