@@ -9,12 +9,17 @@ var foundIt = search.findNode(nodeRef2);
 
 // remove node
 function removeNode(node) {
-     if(node.remove())
-        logger.log(node.displayPath + "/" + node.name + " is deleted");
-     else
-        logger.log(node.displayPath + "/" + node.name + " is NOT deleted");
+	var displayPath = node.displayPath;
+	var nodeName = node.name;
+	
+	if(node.remove()){
+        logger.log(displayPath + "/" + nodeName + " is deleted");
+	}
+	else {
+        logger.log(displayPath + "/" + nodeName + " is NOT deleted");
+	}
      return true;
-     }
+}
 
 //  List all the nodes under folder
 function getNodeListandDelete(currNode) {
